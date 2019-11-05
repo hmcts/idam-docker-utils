@@ -5,7 +5,7 @@ GIT_PAT=$(az keyvault secret show --vault-name infra-vault-prod --name hmcts-git
 
 az acr task create \
     --registry hmctspublic \
-    --name task-feature-toggle-importer \
+    --name task-idam-utils \
     --file acr-build-task.yaml \
     --context https://github.com/hmcts/idam-docker-utils.git \
     --branch master \
